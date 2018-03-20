@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+
+  app:
+    container_name: app.$PROJECT.docker
+    image: python:3.6
+    hostname: app.$PROJECT.docker
+    working_dir: /srv
+    environment:
+      REAL_USER: $REAL_USER
+      DOCKER_ENV: $DOCKER_ENV
+    command: tail -f /dev/null
+    ports:
+      - "8000:8000"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - $PWD:/srv
+      - $HOME/.ssh:/root/.ssh
+      - $HOME/.aws:/root/.aws:ro
