@@ -104,5 +104,5 @@ ENV/
 src
 
 # chalice-deployment related
-.chalice
+.chalice/*
 !.chalice/config.json
