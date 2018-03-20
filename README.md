@@ -12,6 +12,14 @@ It is recommended to use a way to isolate your Python development environments. 
 
 ## Usage
 
+### Cloning the starter project
+
 ```bash
 cookiecutter https://github.com/janaaronlee/wallice-starter
+```
+
+### Using the `wow` utility
+
+```bash
+./wow
 ```
