@@ -1,0 +1,1 @@
+-e git+https://git@github.com/janaaronlee/wallice.git@dev#egg=wallice-0.1.0
