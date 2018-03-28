@@ -5,7 +5,9 @@
     "dev": {
       "autogen_policy": true,
       "api_gateway_stage": "dev",
-      "environment_variables": {},
+      "environment_variables": {
+        "debug": "true"
+      },
       "lambda_timeout": 60,
       "lambda_memory_size": 128,
       "tags": {}
@@ -13,7 +15,9 @@
     "stg": {
       "autogen_policy": true,
       "api_gateway_stage": "stg",
-      "environment_variables": {},
+      "environment_variables": {
+        "debug": "false"
+      },
       "lambda_timeout": 60,
       "lambda_memory_size": 128,
       "tags": {}
@@ -21,7 +25,9 @@
     "prd": {
       "autogen_policy": true,
       "api_gateway_stage": "prd",
-      "environment_variables": {},
+      "environment_variables": {
+        "debug": "false"
+      },
       "lambda_timeout": 60,
       "lambda_memory_size": 128,
       "tags": {}
