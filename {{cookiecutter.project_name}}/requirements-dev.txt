@@ -1,1 +1,1 @@
--e git+https://git@github.com/janaaronlee/wallice.git@v0.1.2#egg=wallice-0.1.2
+-e git+https://git@github.com/janaaronlee/wallice.git@dev#egg=wallice-0.2.0

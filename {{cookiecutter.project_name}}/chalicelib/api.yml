@@ -1,0 +1,30 @@
+openapi: "3.0.0"
+info:
+  title: Sample API for `{{cookiecutter.project_name}}`
+  version: "{{cookiecutter.version}}"
+paths:
+  /:
+    get:
+      description: Root path.
+      responses:
+        '200':
+          description: root response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/root'
+  /hello:
+    get:
+      description: Generic hello to everyone.
+  /hello/{name}:
+    get:
+      description: Hello to a specific name.
+components:
+  schemas:
+    root:
+      required:
+        - hello
+      properties:
+        hello:
+          type: string
+          pattern: world
