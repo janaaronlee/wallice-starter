@@ -2,6 +2,15 @@ version: "3"
 
 services:
 
+  swagger-editor:
+    container_name: swagger.$PROJECT.docker
+    image: swaggerapi/swagger-editor
+    hostname: swagger.$PROJECT.docker
+    ports:
+      - "8080:8080"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+
   app:
     container_name: app.$PROJECT.docker
     image: python:3.6

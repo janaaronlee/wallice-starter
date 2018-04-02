@@ -8,23 +8,45 @@ paths:
       description: Root path.
       responses:
         '200':
-          description: root response
+          description: Root response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/root'
+                required:
+                  - hello
+                properties:
+                  hello:
+                    type: string
+                    pattern: world
   /hello:
     get:
-      description: Generic hello to everyone.
+      description: Generic hello.
+      responses:
+        '200':
+          description: Generic hello response
+          content:
+            text/plain:
+              schema:
+                type: string
+                pattern: hello
   /hello/{name}:
     get:
       description: Hello to a specific name.
-components:
-  schemas:
-    root:
-      required:
-        - hello
-      properties:
-        hello:
-          type: string
-          pattern: world
+      parameters:
+        - name: name
+          in: path
+          description: The name to say hello to
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Hello to a specific name response
+          content:
+            application/json:
+              schema:
+                required:
+                  - hello
+                properties:
+                  hello:
+                    type: string
